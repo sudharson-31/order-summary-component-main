@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;900&display=swap');
+$font: 'Red Hat Display', sans-serif;
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$v-pale: hsl(225, 100%, 98%);
+$desat-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$m-width: 375px;
+*{
+    margin:0%;
+    padding:0%;
+}
+html{
+    min-width: 375px;
+    height: 100%;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $pale-blue;
+}
+.main-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 600px;
+    background-color: $v-pale;
+    border-radius: 20px;
+    
+    .banner-container{
+        display: inline-flex;
+        width: inherit;
+        height: 200px;
+        padding-bottom: 20px;
+        img{
+            display: inline-flex;
+            width: inherit;
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font;
+        padding: 15px 30px;
+        .c1{
+            display: inline-flex;
+            font-weight: 900;
+            font-size: x-large;
+            word-spacing: 1px;
+            letter-spacing: 0.6px;
+            padding-bottom: 15px;
+            color: $dark-blue;
+        }
+        .c2{
+           
+            display: inline-flex;
+            
+            p{
+                color: $desat-blue;
+                font-weight: 500;
+                font-size: medium;
+                text-align: center;
+            }
+        }
+    }
+    .price{
+        display: flex;
+        width: 80%;
+    
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0px 10px;
+        background-color: $v-pale;
+        img{
+            padding: 0px 20px 0px 10px;
+        }
+        .plan{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $font;
+            font-size: medium;
+            font-weight: 500;
+            padding-right: 20px;
+            p.a{
+                color: $dark-blue;
+                font-weight: 700;
+            }
+            p{
+                color: $desat-blue;
+    
+            }
+        }
+        .change-plan{
+            padding-left: 30px;
+            font-family: $font;
+            display: flex;
+            justify-self: flex-end;
+            color: $bright-blue;
+            font-weight: 600;
+            font-size: small;
+           
+            &:hover{
+                transition: 10ms;
+                text-decoration: none;
+                color: lighten($bright-blue,15);
+                cursor: pointer;
+            }
+        }
+        }
+        .finalise{
+            display: flex;
+            padding-top: 20px;
+            flex-direction: column;
+            height: 120px;
+            justify-content: space-around;
+            align-items: center;
+            .pay{
+               
+                background-color: $bright-blue;
+                display: inline-flex;
+                width: 300px;
+                height: 45px;
+                justify-content: center;
+                align-items: center;
+                font-family: $font;
+                font-weight: 500;
+                color: $v-pale;
+                letter-spacing: 0.5px;
+                font-size: medium;
+                border-radius: 15px;
+                border-color: white;
+                &:hover{
+                    cursor: pointer;
+                    transition: 10ms;
+                    background-color: lighten($bright-blue, $amount: 15);
+                }
+            }
+            .cancel{
+                
+                display: inline-flex;
+                font-family: $font;
+                font-weight: 600;
+                font-size: small;
+                color: $desat-blue;
+                text-decoration: none;
+                letter-spacing: 0.5px;
+                &:hover{
+                    transition: 10ms;
+                    color: lighten($dark-blue,15);
+                    cursor: pointer;
+                }
+            }
+        }
+
+    
+    
+    
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 720px){
+  body{
+     background-image: url('../images/pattern-background-mobile.svg');
+     background-repeat: no-repeat;
+    background-size: contain;
+     background-color: $v-pale;
+    }
+  }
