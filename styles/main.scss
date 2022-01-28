@@ -55,7 +55,7 @@ body{
         flex-direction: column;
         align-items: center;
         font-family: $font;
-        padding: 15px 30px;
+        padding: 15px 30px 25px;
         .c1{
             display: inline-flex;
             font-weight: 900;
@@ -80,12 +80,12 @@ body{
     .price{
         display: flex;
         width: 80%;
-    
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        padding: 20px 0px 10px;
-        background-color: $v-pale;
+        padding: 10px 0px 10px;
+        border-radius: 10px;
+        background-color: darken($v-pale,2);
         img{
             padding: 0px 20px 0px 10px;
         }
@@ -130,6 +130,7 @@ body{
             height: 120px;
             justify-content: space-around;
             align-items: center;
+            
             .pay{
                
                 background-color: $bright-blue;
@@ -145,6 +146,7 @@ body{
                 font-size: medium;
                 border-radius: 15px;
                 border-color: white;
+                
                 &:hover{
                     cursor: pointer;
                     transition: 10ms;
@@ -177,6 +179,6 @@ body{
      background-image: url('../images/pattern-background-mobile.svg');
      background-repeat: no-repeat;
     background-size: contain;
-     background-color: $v-pale;
+     background-color: $pale-blue;
     }
   }
